@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Escape Room Matematica - Calcolo Letterale</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div>
+          <p class="tag">Escape Room Matematica</p>
+          <h1>Il Laboratorio delle Formule</h1>
+          <p class="subtitle">
+            Aiuta la classe a uscire dal laboratorio risolvendo enigmi di calcolo letterale.
+            Ogni porta si apre con un’espressione semplificata.
+          </p>
+        </div>
+        <div class="progress">
+          <div class="progress-label">Progresso fuga</div>
+          <div class="progress-bar" aria-label="Progresso">
+            <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+          </div>
+          <p id="progressText" class="progress-text">0/4 porte aperte</p>
+        </div>
+      </header>
+
+      <main>
+        <section class="room">
+          <div class="room-header">
+            <h2>Porta 1: Termini simili</h2>
+            <p>Riduci l’espressione al minimo.</p>
+          </div>
+          <div class="puzzle">
+            <div class="puzzle-expression">3x + 2x − 5x + 4</div>
+            <div class="puzzle-actions">
+              <input id="answer1" type="text" placeholder="Es. 4" />
+              <button data-check="1">Sblocca</button>
+            </div>
+            <p id="feedback1" class="feedback" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section class="room">
+          <div class="room-header">
+            <h2>Porta 2: Proprietà distributiva</h2>
+            <p>Raccogli o sviluppa per ottenere la forma richiesta.</p>
+          </div>
+          <div class="puzzle">
+            <div class="puzzle-expression">2(a + 3) + a</div>
+            <div class="puzzle-actions">
+              <input id="answer2" type="text" placeholder="Es. 3a + 6" />
+              <button data-check="2">Sblocca</button>
+            </div>
+            <p id="feedback2" class="feedback" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section class="room">
+          <div class="room-header">
+            <h2>Porta 3: Semplificazione con lettere</h2>
+            <p>Combina i termini nella stessa variabile.</p>
+          </div>
+          <div class="puzzle">
+            <div class="puzzle-expression">5y − 2 + 3y + 1</div>
+            <div class="puzzle-actions">
+              <input id="answer3" type="text" placeholder="Es. 8y - 1" />
+              <button data-check="3">Sblocca</button>
+            </div>
+            <p id="feedback3" class="feedback" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section class="room">
+          <div class="room-header">
+            <h2>Porta 4: Sostituzione di valori</h2>
+            <p>Calcola il valore dell’espressione per x = 2.</p>
+          </div>
+          <div class="puzzle">
+            <div class="puzzle-expression">x² + 3x − 4</div>
+            <div class="puzzle-actions">
+              <input id="answer4" type="text" placeholder="Es. 6" />
+              <button data-check="4">Sblocca</button>
+            </div>
+            <p id="feedback4" class="feedback" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section class="room finale">
+          <div class="room-header">
+            <h2>Camera finale</h2>
+            <p id="finalMessage">
+              Risolvi tutte le porte per accendere la luce del laboratorio e uscire.
+            </p>
+          </div>
+          <div class="loot">
+            <div class="loot-card">
+              <h3>Bonus</h3>
+              <p>Ogni porta sbloccata rivela un suggerimento di studio.</p>
+              <ul>
+                <li>Termini simili: somma solo le parti con la stessa lettera.</li>
+                <li>Distributiva: moltiplica ogni termine dentro la parentesi.</li>
+                <li>Semplificazione: separa costanti e variabili.</li>
+                <li>Sostituzione: rimpiazza la lettera con il valore dato.</li>
+              </ul>
+            </div>
+            <div class="loot-card" id="exitCard">
+              <h3>Porta d’uscita</h3>
+              <p>
+                Completa tutte le sfide per ricevere la combinazione finale e
+                sbloccare il laboratorio.
+              </p>
+              <div class="exit-code" id="exitCode">----</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
